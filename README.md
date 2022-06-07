@@ -2,4 +2,4 @@
 
 
 
-www.cred-default-detector.herokuapp.com
+https://cred-default-detector.herokuapp.com
