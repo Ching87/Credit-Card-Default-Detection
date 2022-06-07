@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>CreditCardDefaultDetector</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+        <script type = 'text/javascript' src= "{{ url_for( 'static' , filename='script.js') }}">
+
+        </script>
+
+		<!-- Website Title -->
+		<div class="container">
+			<h2 class='container-heading'><span>CREDIT CARD DEFAULT DETECTOR</span> </h2>
+			</div>
+		</div>
+
+        <br>
+    
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Ooppss! This is a fault.</span></h1>
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Yayy! This is NOT a fault.</span></h1>
+			{% endif %}
+		</div>
+
+	<br>
+	<br>
+	<br>
+
+	<p>Contact me: chingkhei.singha.87@gmail.com</p>
+	<p>Created by AC Singha</p>
+
+	</body>
+</html>

@@ -1,0 +1,248 @@
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreditCardDefaultDetector</title>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="static/styles.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">CREDIT CARD DEFAULT DETECTOR</a>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <br>
+    
+    <div class="container">
+
+        <form action="\predict" method="post">
+            
+            
+            <div class="card-columns">
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Age</h5>
+                            <input name="Age" id="first" required = "required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center" >
+                            <h5 class="card-title">Gender</h5>
+                            <select name="Gender" required = "required">
+                                <option value="">Not Selected</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Total Family Member</h5>
+                            <input id="first" name="Total family members" required = "required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-columns">
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Do you own a house?</h5>
+                            <select name="own_house" required = "required">
+                                <option value="">Not Selected</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" >
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Do you own a car</h5>
+                            <select name="own_car" required = "required">
+                                <option value="">Not Selected</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Occupation</h5>
+                            <select name="Occupation" required = "required">
+                                <option value="">Not Selected</option>
+                                <option value="IT staff">IT staff</option>
+                                <option value="Secretaries">Secretaries</option>
+                                <option value="Accountants">Accountants</option>
+                                <option value="Core staff">Core staff</option>
+                                <option value="High skill tech staff">High skill tech staff</option>
+                                <option value="Managers">Managers</option>
+                                <option value="Private service staff">Private service staff</option>
+                                <option value="Medicine staff">Medicine staff</option>
+                                <option value="HR staff">HR staff</option>
+                                <option value="Sales staff">Sales staff</option>
+                                <option value="Realty agents">Realty agents</option>
+                                <option value="Security staff">Security staff</option>
+                                <option value="Waiters/barmen staff">Waiters/barmen staff</option>
+                                <option value="Cleaning staff">Cleaning staff</option>
+                                <option value="Laborers">Laborers</option>
+                                <option value="Cooking staff">Cooking staff</option>
+                                <option value="Drivers">Drivers</option>
+                                <option value="Low-skill Laborers">Low-skill Laborers</option>
+                                <option value="Others">Others</option>
+                                <var><option value=""></option></var>    
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-columns">
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Credit Limit</h5>
+                            <input name="Credit Limit" id="first" required = "required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Credit Limit used(%)</h5>
+                            <input name="Credit Limit used(%)" id="first" required = "required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Credit Score</h5>
+                            <input name="Credit Score" id="first" required = "required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+             
+            <div class="card-columns">
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Are you a migrant worker?</h5>
+                            <select name="migrant" required = "required">
+                                <option value="">Not Selected</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Number of days employed</h5>
+                            <input name="days employed" id="first" required = "required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Net yearly deft payments</h5>
+                            <input name="yearly deft payments" id="first" required = "required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-columns"> 
+                <div class="col-sm-6">
+                    <div class="card bg-info" style="width:300px">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Number of previous defaults</h5>
+                            <input name="previous defaults" id="first" required = "required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <style>
+        body {
+            background-color: rgb(205, 221, 236);
+            text-align: center;
+            padding: 0px;
+        }
+        
+
+        
+        #first {
+            border-radius: 5px;
+            height: 18px;
+            font-size: 10px;
+            text-align: center;
+        }
+        
+        
+    </style>            
+
+            <p>Click on the Submit Button </p>
+
+
+            <!-- Submit -->
+
+            <input type="submit" value="Submit" class="btn btn-secondary">
+        </form>
+
+
+    </div>
+
+     
+
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <p>Contact me: chingkhei.singha.87@gmail.com</p>
+    <p>Created by AC Singha</p>
+
+
+</body>
+
+</html>
