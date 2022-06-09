@@ -22,4 +22,4 @@ Visualized the data, multiple missing values and outliers detected. Missing valu
  
  ![image](https://user-images.githubusercontent.com/96677288/172863243-38ac5fef-ce37-4ccf-9d26-f61b6b58d80d.png)
 
-   
+  Since, the dataset is still imbalanced after oversampling, i have used the macro type of f1 score. Macro is useful when the dataset is imbalanced because it calculates the f1 score per class (taking one class at a time)
