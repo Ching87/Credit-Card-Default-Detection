@@ -4,12 +4,14 @@
 
 https://cred-default-detector.herokuapp.com
 
+(Used Flask , docker image and deployed on Heroku platform)
+
+A demo of the project is given below:-
 
 https://user-images.githubusercontent.com/96677288/172887599-abc2fedc-40f7-47f7-8c1f-a91ea3f91e5b.gif
 
 
 
-Used Flask , docker image and deployed on Heroku platform
 
 
 ### Introduction
